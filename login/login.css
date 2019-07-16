@@ -23,6 +23,9 @@ body{
     z-index: 2;
 }
 
+#account{
+    position: relative;
+}
 #account>img{
     border-radius: 50%;
     width: 60%;
