@@ -1,5 +1,7 @@
 $(function () {
-    main();
+    var logo=new Image();
+    logo.src='mi.png';
+    logo.onload=main;
 });
 
 function main() {
