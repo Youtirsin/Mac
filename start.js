@@ -1,11 +1,19 @@
 $(function () {
-    setTimeout(() => {
-        start();
-    }, 3000);
+    main();
 });
 
+function main() {
+    setTimeout(() => {
+        start();
+    }, 3000); //7+1.5+2+2=12.5s
+    setTimeout(() => {
+        loginin();
+    }, 15000);
+};
+
+
 function start() {
-    $('body').css({
+    $('#realbody').css({
         'background': 'white',
         'transition': '2s'
     });
@@ -30,8 +38,12 @@ function start() {
 function jump() {
     $('#scroll').css('background', 'white');
     $('#scroll div').css('background', 'white');
-    $('body,#scroll,#scroll div').css({
+    $('#realbody,#scroll,#scroll div').css({
         'background': '#000',
         'transition': '2s'
     });
+}
+
+function loginin() {
+    window.location.href = 'login/login.html';
 }
