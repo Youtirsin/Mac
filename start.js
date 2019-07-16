@@ -1,6 +1,5 @@
 $(function () {
     main();
-    $.get("login/wallpaper.jpg");
 });
 
 function main() {
@@ -27,7 +26,9 @@ function start() {
                 //scrolllen=0;
                 clearInterval(scroll_);
                 setTimeout(() => {
-                    jump();
+                    var wallpaper = new Image();
+                    wallpaper.src = 'login/wallpaper.jpg';
+                    wallpaper.onload = jump;
                 }, 2000);
             } else {
                 $('#scroll div').css('width', scrolllen);
