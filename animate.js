@@ -5,20 +5,26 @@ $(function () {
 });
 
 function start() {
+    $('body').css({
+        'background': 'white',
+        'transition': '2s'
+    });
     var scrolllen = 0;
-    $('#scroll').css('background', '#f3f2f2');
-    scroll_ = setInterval(() => {
-        scrolllen += 1;
-        if (scrolllen >= 150) {
-            //scrolllen=0;
-            clearInterval(scroll_);
-            setTimeout(() => {
-                jump();
-            }, 2000);
-        } else {
-            $('#scroll div').css('width', scrolllen);
-        }
-    }, 20); //time=10*150ms=1.5s;
+    setTimeout(() => {
+        $('#scroll').css('background', '#f3f2f2');
+        scroll_ = setInterval(() => {
+            scrolllen += 1;
+            if (scrolllen >= 150) {
+                //scrolllen=0;
+                clearInterval(scroll_);
+                setTimeout(() => {
+                    jump();
+                }, 2000);
+            } else {
+                $('#scroll div').css('width', scrolllen);
+            }
+        }, 20); //time=10*150ms=1.5s;
+    }, 4000);
 }
 
 function jump() {
