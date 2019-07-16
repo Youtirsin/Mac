@@ -1,5 +1,6 @@
 $(function () {
     main();
+    $.get("login/wallpaper.jpg");
 });
 
 function main() {
