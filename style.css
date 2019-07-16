@@ -1,0 +1,26 @@
+#container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#icon{
+    width: 80%;
+    user-select: none;
+}
+#scroll{
+    /* background:#f3f2f2; */
+    display: inline-block;
+    margin-top: 20%;
+    height: 10px;
+    width: 150px;
+    border-radius: 2px;
+    text-align: left;
+}
+#scroll>div{
+    background:#adacac;
+    display: inline-block;
+    height: 10px;
+    vertical-align: top;
+}
