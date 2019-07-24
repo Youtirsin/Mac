@@ -26,5 +26,5 @@ function activate() {
 
 };
 function login(){
-    $('#container').html('<div class="loading"></div>');
+    alert('wrong PIN')
 };
