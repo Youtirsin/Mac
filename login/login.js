@@ -13,9 +13,18 @@ function activate() {
             $('#account').animate({
                 'top': '-60px'
             }, 500, function () {
-                $('#container').append('<div><input type="password"></div>');
+                $('#container').append('<div id="pin"><input type="password"></div>');
+                $('#pin input').keypress(function (e) { 
+                    if(e.keyCode==13){
+                        login();
+                    }
+                });
             });
             done = true;
         }
     });
+
+};
+function login(){
+    $('#container').html('<div class="loading"></div>');
 };
